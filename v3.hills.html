@@ -91,7 +91,7 @@
     var centrifugal   = 0.3;                     // centrifugal force multiplier when going around curves
     var offRoadDecel  = 0.99;                    // speed multiplier when off road (e.g. you lose 2% speed each update frame)
     var skySpeed      = 0.001;                   // background sky layer scroll speed when going around curve (or up hill)
-    var hillSpeed     = 0.002;                   // background hill layer scroll speed when going around curve (or up hill)
+    var hillSpeed     = 100;                   // background hill layer scroll speed when going around curve (or up hill)
     var treeSpeed     = 0.003;                   // background tree layer scroll speed when going around curve (or up hill)
     var skyOffset     = 0;                       // current sky scroll offset
     var hillOffset    = 0;                       // current hill scroll offset
@@ -118,7 +118,7 @@
     var position      = 0;                       // current camera Z position (add playerZ to get player's absolute Z position)
     var speed         = 0;                       // current speed
     var maxSpeed      = segmentLength/step;      // top speed (ensure we can't move more than 1 segment in a single frame to make collision detection easier)
-    var accel         =  maxSpeed/100;             // acceleration rate - tuned until it 'felt' right
+    var accel         =  maxSpeed/1;             // acceleration rate - tuned until it 'felt' right
     var breaking      = -maxSpeed;               // deceleration rate when braking
     var decel         = -maxSpeed/5;             // 'natural' deceleration rate when neither accelerating, nor braking
     var offRoadDecel  = -maxSpeed/2;             // off road deceleration is somewhere in between
